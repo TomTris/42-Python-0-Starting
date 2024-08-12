@@ -1,44 +1,35 @@
-from time import sleep
-from tqdm import tqdm
+def count_len(object: any) -> int:
+    """count how long is the range"""
+    count = 0
+    for i in object:
+        count += 1
+    return count
 
 
 def ft_tqdm(lst: range) -> None:
-    total = len(lst)
+    total = count_len(lst)
 
     def print_stuff(iteration: int):
-        iteration = int (iteration * 100 / total)
-        form = "\r{:3.0f}".format(iteration) + "%|[" + (iteration * "=" + (100 - iteration) * " ") + "]"
+        ite_ori = iteration
+        whitespace = 200
+        iteration = (int)(iteration * whitespace // total)
+        form = "\r{:3.0f}".format(iteration * 100 // whitespace) + "%|["
+        form += (iteration * "=" + (whitespace - iteration) * " ")
+        if (ite_ori != total):
+            form += " ]| " + str(ite_ori) + "/" + str(total)
+        else:
+            form += ">]| " + str(ite_ori) + "/" + str(total)
         print(form, sep="", end="")
-    
-    # while(1):
+
     for i, item in enumerate(lst):
-        yield item * item
+        yield item
         print_stuff(i + 1)
-    print("abc")
-
-# def main():
-#     return 1
+    print()
 
 
-# if __name__ == "__main__":
-#     main()
+def main():
+    return 1
 
-# from Loading import ft_tqdm
-for elem in ft_tqdm(range(333)):
-    sleep(0.001)
-# a = ft_tqdm(range(333))
-# print(next(a))
-# print(next(a))
-# print(next(a))
-# print(next(a))
-# print(next(a))
-# print(next(a))
-# print(next(a))
-# print(next(a))
-# print(next(a))
-# print()
-for elem in tqdm(range(333)):
-    sleep(0.02)
-print()
 
-# print(tqdm.__doc__)
+if __name__ == "__main__":
+    main()
