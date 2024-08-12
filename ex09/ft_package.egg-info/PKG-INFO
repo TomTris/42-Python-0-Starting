@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: ft-package
+Version: 0.0.1
+Summary: A sample test package
+Home-page: https://github.com/TomTris/42-Python-0-Starting
+Author: TomTris
+Author-email: quoctrido.jb@gmail.com
+License: MIT
+Description: # My first Python library
+        
+        Loading function
+        ft_tqdm - reproduce tqdm in my own style.
+Platform: UNKNOWN
+Classifier: Programing Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Ondependent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown

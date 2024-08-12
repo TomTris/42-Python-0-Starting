@@ -26,11 +26,3 @@ def ft_tqdm(lst: range) -> None:
         yield item
         print_stuff(i + 1)
     print()
-
-
-def main():
-    return 1
-
-
-if __name__ == "__main__":
-    main()

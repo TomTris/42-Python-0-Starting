@@ -3,6 +3,7 @@ import sys
 
 
 def count_len(object: any) -> int:
+    """count how many arguments"""
     count = 0
     for i in object:
         count += 1
@@ -12,6 +13,7 @@ def count_len(object: any) -> int:
 
 
 def wordsf(argv: str) -> list:
+    """Break string to words"""
     ret = []
     string = ""
     for letter in argv:
@@ -25,6 +27,7 @@ def wordsf(argv: str) -> list:
 
 
 def main():
+    """String filter"""
     argv = sys.argv
     if (count_len(argv) != 3):
         print("AssertionError: the arguments are bad")

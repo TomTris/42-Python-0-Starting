@@ -2,6 +2,7 @@ import sys
 
 
 def count_len(object: any) -> int:
+    """count how many arguments"""
     count = 0
     for i in object:
         count += 1
@@ -11,6 +12,7 @@ def count_len(object: any) -> int:
 
 
 def isValidString(string: str) -> bool:
+    """check if string is valid"""
     for letter in string:
         if not letter.isalnum() and not letter.isspace():
             return False
@@ -18,6 +20,7 @@ def isValidString(string: str) -> bool:
 
 
 def morseInit() -> dict:
+    """Init Morse code"""
     ret = {" ": "/",
            "A": ".-",
            "B": "-...",
@@ -59,6 +62,7 @@ def morseInit() -> dict:
 
 
 def main():
+    """String to morse"""
     args = sys.argv
     if count_len(args) != 2 or isValidString(args[1]) is False:
         print("AssertionError: the arguments are bad")
@@ -77,4 +81,5 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    # main()
+    print(isValidString.__doc__)

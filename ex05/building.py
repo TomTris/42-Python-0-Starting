@@ -2,6 +2,7 @@ import sys
 
 
 def count_len(object: any) -> int:
+    """count how many arguments"""
     count = 0
     for i in object:
         count += 1
@@ -11,6 +12,7 @@ def count_len(object: any) -> int:
 
 
 def main():
+    """Automatic printing number of uppers, lowers, punctuaions, spaces and digits in a string"""
     argv = sys.argv
     count = count_len(argv)
     if (count == 1):
