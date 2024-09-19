@@ -1,3 +1,5 @@
+en.subject.pdf - original description of the Project.
+
 This project is for learning Python from beginning.
 
 It includes:
